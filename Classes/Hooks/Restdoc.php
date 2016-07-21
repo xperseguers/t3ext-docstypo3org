@@ -8,9 +8,15 @@ class Restdoc
      * Post-processes the body to add dynamic links to TSref.
      *
      * @param array $params
+     * @return void
      */
     public function postProcessBody(array $params)
     {
+        if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('sphinx')) {
+            // No post-processing available
+            return;
+        }
+
         $remoteUrl = 'https://docs.typo3.org/typo3cms/TyposcriptReference/';
         $references = \Causal\Sphinx\Utility\MiscUtility::getIntersphinxReferences(
             'typo3cms.references.t3tsref',
