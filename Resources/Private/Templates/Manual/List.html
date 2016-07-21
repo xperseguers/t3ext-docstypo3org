@@ -1,0 +1,22 @@
+<f:if condition="{partial}">
+    <p class="bg-warning">
+        <f:link.action action="list">« Back to the list of extensions</f:link.action>
+    </p>
+</f:if>
+
+<ul class="list-unstyled">
+    <f:for each="{extensions}" key="extension" as="extensionInfo">
+        <li><strong>{extension}</strong>
+            <ul>
+                <f:for each="{extensionInfo}" key="version" as="locales">
+                    <li>{version}:
+                        <f:for each="{locales}" as="locale" iteration="iterator">
+                            <f:link.action action="show" arguments="{extension:extension, version:version, locale:locale}">{locale}</f:link.action>
+                            <f:if condition="{iterator.isLast}"><f:else>|</f:else></f:if>
+                        </f:for>
+                    </li>
+                </f:for>
+            </ul>
+        </li>
+    </f:for>
+</ul>

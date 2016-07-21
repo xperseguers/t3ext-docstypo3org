@@ -1,0 +1,42 @@
+<p class="bg-warning">
+    <f:link.action action="list">« Back to the list of extensions</f:link.action>
+</p>
+
+<div class="container">
+    <div class="col-md-4">
+        <f:format.raw>{documentation.masterTableOfContents}</f:format.raw>
+    </div>
+    <div class="col-md-8">
+        <f:format.raw>{documentation.body}</f:format.raw>
+
+        <nav>
+            <ul class="pager">
+                <f:if condition="{documentation.previousDocument}">
+                    <li>
+                        <a href="{documentation.previousDocument.url}" class="btn btn-default"
+                           title="{documentation.previousDocument.title}" accesskey="p">Previous</a>
+                    </li>
+                </f:if>
+                <f:if condition="{documentation.nextDocument}">
+                    <li>
+                        <a href="{documentation.nextDocument.url}" class="btn btn-default"
+                           title="{documentation.nextDocument.title}" accesskey="n">Next</a>
+                    </li>
+                </f:if>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<footer>
+    <hr/>
+
+    <div class="small">
+        <p>© Copyright {documentation.mainDocument.copyright}</p>
+        <p>Last rendered on <f:format.date format="d.m.Y H:i:s">{documentation.data.last_modification}</f:format.date></p>
+    </div>
+
+    <p class="bg-warning">
+        <f:link.action action="list">« Back to the list of extensions</f:link.action>
+    </p>
+</footer>

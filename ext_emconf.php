@@ -1,0 +1,31 @@
+<?php
+$EM_CONF[$_EXTKEY] = array(
+    'title' => 'TSref post-processor for EXT:restdoc',
+    'description' => '',
+    'category' => 'services',
+    'author' => 'Xavier Perseguers',
+    'author_email' => 'xavier@causal.ch',
+    'author_company' => 'Causal Sàrl',
+    'shy' => '',
+    'dependencies' => '',
+    'priority' => '',
+    'module' => '',
+    'state' => 'alpha',
+    'internal' => '',
+    'uploadfolder' => '0',
+    'createDirs' => '',
+    'modify_tables' => '',
+    'clearCacheOnLoad' => 0,
+    'lockType' => '',
+    'version' => '0.1-dev',
+    'constraints' => array(
+        'depends' => array(
+            'php' => '5.5.0-7.0.99',
+            'typo3' => '7.6.0-8.99.99',
+            'restdoc' => '1.7.0-',
+            'realurl' => '',
+        ),
+        'conflicts' => array(),
+        'suggests' => array(),
+    ),
+);
