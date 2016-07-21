@@ -64,3 +64,16 @@ drwxr-xr-x   3 xavier  staff    102 Jul 20 15:48 _static
 ```
 
 Now put a frontend plugin on some page of your website and enjoy!
+
+
+Getting manuals rendered as JSON
+--------------------------------
+
+If you have a full blown Sphinx environment, just run
+
+```
+$ make json
+```
+
+If you use EXT:sphinx, for this extension of the manual of EXT:cloudflare, just render it using the mode "interactive"
+and then copy generated files from `/path/to/website/typo3temp/tx_sphinx/cloudflare/_make/build/json/`.
