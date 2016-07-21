@@ -62,3 +62,5 @@ drwxr-xr-x   3 xavier  staff    102 Jul 20 15:48 _static
 -rw-r--r--   1 xavier  staff    102 Jul 20 15:48 search.fjson
 -rw-r--r--   1 xavier  staff   9845 Jul 20 15:48 searchindex.json
 ```
+
+Now put a frontend plugin on some page of your website and enjoy!
